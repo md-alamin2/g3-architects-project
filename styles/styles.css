@@ -7,9 +7,9 @@
     font-weight: 400;
     font-style: normal;
   }
-  *{
+  /* *{
     margin: 0;
-  }
+  } */
   
   /* header section styles */
 
@@ -21,16 +21,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
+    /* padding-top: 50px; */
   }
   .logo{
-    font-size: 45px;
+    font-size: 2.8rem;
     font-weight: bold;
   }
   .menu{
     display: flex;
-    gap: 30px;
+    gap: 1.9rem;
     list-style: none;
   }
   .menu-link{
@@ -42,11 +43,43 @@
 
   /* hero section styles */
 .hero-section{
-    width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
+    /* padding-top: 102px; */
+}
+.hero-container{
+    max-width: 862px;
     margin: 0 auto;
     text-align: center;
 }
 .hero-title{
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: bold;
+}
+.hero-des{
+  font-size: 1rem;
+  color: rgba(114, 114, 114, 1);
+  /* padding-top: 25px; */
+}
+.hero-btn{
+  background-color: rgba(255, 144, 14, 1);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px 25px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+.hero-img{
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+/* responsive styles */
+
+@media screen and (max-width: 576px) {
+  .navbar, .menu{
+    flex-direction: column;
+  }
 }
