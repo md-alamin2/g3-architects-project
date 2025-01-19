@@ -7,9 +7,6 @@
     font-weight: 400;
     font-style: normal;
   }
-  /* *{
-    margin: 0;
-  } */
   
   /* header section styles */
 
@@ -23,7 +20,6 @@
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
-    /* padding-top: 50px; */
   }
   .logo{
     font-size: 2.8rem;
@@ -45,7 +41,6 @@
 .hero-section{
     max-width: 1440px;
     margin: 0 auto;
-    /* padding-top: 102px; */
 }
 .hero-container{
     max-width: 862px;
@@ -140,7 +135,7 @@
   font-weight: bold;
   border-left: 5px solid rgba(255, 144, 14, 1);
   padding: 0 21px;
-  max-width: 470px;
+  max-width: 470px;margin-top: 0;
 }
 
 .features-des{
@@ -161,13 +156,14 @@
 .features-card-title{
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 }
 
 .features-card-des{
   font-size: 1rem;
   font-weight: 400;
   color: rgba(114, 114, 114, 1);
+  margin: 0;
 }
 
 .features-img{
@@ -180,7 +176,7 @@
   font-size: 1.2rem;
   font-weight: 500;
   margin-left: -92px;
-  margin-top: -100px;
+  margin-top: -90px;
   padding: 42px 45px;
   border: none;
   border-radius: 8px;
@@ -192,9 +188,13 @@
 
 /* facts section styles */
 
+.facts{
+  margin-top: 130px;
+}
 .facts-title{
   font-size: 2.8rem;
   font-weight: bold;
+  margin: 0;
 }
 
 .facts-des{
@@ -202,11 +202,13 @@
   font-weight: 400;
   max-width: 542px;
   color: rgba(114, 114, 114, 1);
+  margin-top: 24px;
 }
 
 /* facts card section style */
 
 .facts-cards-container{
+  margin-top: 90px;
   display: flex;
   gap: 124px;
   justify-content: center;
@@ -234,13 +236,63 @@
   margin-top: 5px;
 }
 
+/* sponsors section  */
+
+.sponsors-section{
+  text-align: center;
+  margin-top: 150px;
+}
+
+.sponsors-title{
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sponsors-des{
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 542px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.sponsors-img{
+  display: flex;
+  justify-content: space-between;
+  filter: grayscale(100%);
+  margin-top: 50px;
+}
+
+/* footer section style */
+
+.footer{
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: rgba(255, 244, 231, 1);
+  border-radius: 8px;
+}
+
+.copyright{
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 100px;
+  padding: 38px 0 38px 0;
+}
 /* responsive styles */
 
+/* for small device */
+
 @media screen and (max-width: 576px) {
+  /* header section */
   .navbar, .menu{
     flex-direction: column;
   }
 
+  /* main section */
+
+  /* team section */
   .team-container{
     flex-direction: column;
     gap: 32px;
@@ -255,6 +307,7 @@
     margin: 0 auto;
   }
 
+  /* features section */
   .features-container{
     flex-direction: column;
     gap: 50px;
@@ -265,22 +318,95 @@
     margin: 0;
   }
 
-
+  /* fact section */
+  .facts{
+    text-align: center;
+  }
   .facts-cards-container{
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(1, 1fr);
     justify-self: center;
+    margin-top: 30px;
   }
+
+  /* sponsors section */
+  .sponsors-section{
+    margin-top: 60px;
+  }
+
+  .sponsors-img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-self: center;
+  }
+
+  /* footer */
+
+  .copyright{
+    margin-top: 50px;
+  }
+  
   
 }
 
+/* for medium device */
+
 @media screen and (min-width: 577px) and (max-width: 990px) {
+  /* team section */
   .team-container{
     flex-direction: column;
     gap: 32px;
   }
   .team-txt{
     max-width: 100%;
+  }
+  .team-btn{
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* features section */
+  .features-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+  }
+
+  .features-btn{
+    margin: 0;
+  }
+
+  /* facts section */
+
+  .facts{
+    text-align: center;
+  }
+
+  .facts-des{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .facts-cards-container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+    margin-top: 50px;
+  }
+
+  /* sponsors section */
+  .sponsors-section{
+    margin-top: 60px;
+  }
+
+  .sponsors-img{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-self: center;
   }
 }
